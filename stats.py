@@ -12,3 +12,15 @@ def count_letters(text):
         if char in count_dict:
             count_dict[char] += 1
     return count_dict
+
+def sort_on(dict):
+    return dict["num"]
+
+def dict_to_list(dict):
+    list = []
+    for each in dict:
+        temp = {"char": each, "num": dict[each]}
+        list.append(temp)
+    list.sort(reverse=True, key=sort_on)
+    return list
+
